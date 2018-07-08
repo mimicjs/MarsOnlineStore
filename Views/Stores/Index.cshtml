@@ -1,0 +1,50 @@
+﻿<title>Store Details</title>
+<body>
+    <div id="app-Stores"></div>
+</body>
+
+<script async type="text/javascript" src="~/Scripts/React/dist/stores.js"></script>
+
+@*@model IEnumerable<MarsOnlineStore.Models.Store>
+
+@{
+    ViewBag.Title = "Store Details";
+}
+
+<h2>Store Details</h2>
+
+<div id="modal-div"></div>
+
+@Html.ActionLink("Add New Store", "Create", "Stores", new { @class = "btn btn-info" })
+<br>
+<br>
+<table class="table">
+    <tr>
+        <th>
+            Store Name
+        </th>
+        <th>
+            Address
+        </th>
+        <th>
+        </th>
+    </tr>
+    @if (Model != null)
+    {
+        foreach (var store in Model)
+        {
+            <tr>
+                <td>
+                    @store.Name
+                </td>
+                <td>
+                    @store.Address
+                </td>
+                <td>
+                    @Html.ActionLink(" Edit", "Edit", "Customers", new { id = store.Id }, new { @class = "btn btn-warning btn-md glyphicon glyphicon-edit" })
+                    @Html.ActionLink(" Delete", "Delete", "Customers", new { id = store.Id }, new { @class = "btn btn-danger btn-md glyphicon glyphicon-trash" })
+                </td>
+            </tr>
+        }
+    }
+</table>*@

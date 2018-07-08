@@ -1,0 +1,61 @@
+﻿<title>Sales Details</title>
+<body>
+    <div id="app-Sales"></div>
+</body>
+
+<script async type="text/javascript" src="~/Scripts/React/dist/sales.js"></script>
+
+
+@*@model IEnumerable<MarsOnlineStore.Models.ProductSoldViewModel>
+
+    @{
+        ViewBag.Title = "Sales Details";
+    }
+
+    <h2>Sales Details</h2>
+
+    @Html.ActionLink("Add New Sale Record", "Create", "Sales", new { @class = "btn btn-info" })
+    <br>
+    <br>
+    <table class="table">
+        <tr>
+            <th>
+                Customer Name
+            </th>
+            <th>
+                Product Name
+            </th>
+            <th>
+                Store Name
+            </th>
+            <th>
+                Date Sold
+            </th>
+            <th>
+            </th>
+        </tr>
+        @if (Model != null)
+        {
+            foreach (var sale in Model)
+            {
+                <tr>
+                    <td>
+                        @sale.CustomerName
+                    </td>
+                    <td>
+                        @sale.ProductName
+                    </td>
+                    <td>
+                        @sale.StoreName
+                    </td>
+                    <td>
+                        @sale.DateSold
+                    </td>
+                    <td>
+                        @Html.ActionLink(" Edit", "Edit", "Customers", new { id = sale.Id }, new { @class = "btn btn-warning btn-md glyphicon glyphicon-edit" })
+                        @Html.ActionLink(" Delete", "Delete", "Customers", new { id = sale.Id }, new { @class = "btn btn-danger btn-md glyphicon glyphicon-trash" })
+                    </td>
+                </tr>
+            }
+        }
+    </table>*@

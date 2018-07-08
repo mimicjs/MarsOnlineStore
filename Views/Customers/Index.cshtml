@@ -1,0 +1,48 @@
+﻿<title>Customer Details</title>
+<body>
+    <div id="app-Customers"></div>
+</body>
+
+<script async type="text/javascript" src="~/Scripts/React/dist/customers.js"></script>
+
+@*@model IEnumerable<MarsOnlineStore.Models.Customer>
+
+    @{
+        ViewBag.Title = "Customer Details";
+    }
+
+    <h2>Customer Details</h2>
+
+    @Html.ActionLink("Add New Customer", "Create", "Customers", new { @class = "btn btn-info" })
+    <br>
+    <br>
+    <table class="table">
+        <tr>
+            <th>
+                Customer Name
+            </th>
+            <th>
+                Address
+            </th>
+            <th>
+            </th>
+        </tr>
+        @if (Model != null)
+        {
+            foreach (var customer in Model)
+            {
+                <tr>
+                    <td>
+                        @customer.Name
+                    </td>
+                    <td>
+                        @customer.Address
+                    </td>
+                    <td>
+                        @Html.ActionLink(" Edit", "Edit", "Customers", new { id = customer.Id }, new { @class = "btn btn-warning btn-md glyphicon glyphicon-edit" })
+                        @Html.ActionLink(" Delete", "Delete", "Customers", new { id = customer.Id }, new { @class = "btn btn-danger btn-md glyphicon glyphicon-trash" })
+                    </td>
+                </tr>
+            }
+        }
+    </table>*@

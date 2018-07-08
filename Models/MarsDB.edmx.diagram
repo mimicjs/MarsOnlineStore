@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f3a075c7f490443a946188de1e50876b" Name="Diagram1">
+        <EntityTypeShape EntityType="MarsOnlineStore20180628Model.Customer" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MarsOnlineStore20180628Model.Product" Width="1.5" PointX="2.625" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MarsOnlineStore20180628Model.ProductSold" Width="1.5" PointX="5.875" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MarsOnlineStore20180628Model.Store" Width="1.5" PointX="1" PointY="2.375" IsExpanded="true" />
+        <AssociationConnector Association="MarsOnlineStore20180628Model.FK_ProductSold_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="MarsOnlineStore20180628Model.FK_ProductSold_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="MarsOnlineStore20180628Model.FK_ProductSold_Store" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
